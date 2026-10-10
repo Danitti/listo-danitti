@@ -8,3 +8,4 @@
 - `git commit -am "mensaje"`: add y commit de lo ya seguido
 - `git restore <fichero>`: descarta lo que no has guardado
 - Atajos de teclado: mira ATAJOS.md
+- `git revert --no-edit HEAD`: Revierte el último commit y lo quita de GitHub
