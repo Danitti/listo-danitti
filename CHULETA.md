@@ -12,3 +12,4 @@
 - `git revert --no-edit HEAD`: Revierte el último commit y lo quita de GitHub
 - `git revert HEAD`: Deshace el último commit con otro commit
 - `git fetch`: descarga lo nuevo sin tocar tus ficheros
+- `git switch -c <rama>`: crea una rama
