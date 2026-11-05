@@ -14,6 +14,7 @@
           {{ render_field(form.title, autofocus=true) }}
           <p id="contador" class="form-text"></p>
           {{ render_field(form.description, rows=4) }}
+          <p>Vista previa: <strong id="vista-previa"></strong></p>
           <div class="d-flex gap-2">
             {{ form.submit(class="btn btn-primary") }}
             <a href="{{ url_for('tasks.index') }}" class="btn btn-outline-secondary">Cancelar</a>
