@@ -11,28 +11,12 @@ function actualizarContador() {
     vistaPrevia.textContent = campoTitulo.value;
 }
 
-function limpiarErrores() {
-    for (const campo of formulario.querySelectorAll(".is-invalid")) {
-        campo.classList.remove("is-invalid");
-    }
-    for (const aviso of formulario.querySelectorAll(".invalid-feedback")) {
-        aviso.remove();
-    }
-}
-// Marca un campo en rojo y escribe el mensaje debajo de él
-function mostrarError(campo, mensaje) {
-    campo.classList.add("is-invalid");
-    const aviso = document.createElement("div");
-    aviso.classList.add("invalid-feedback");
-    aviso.textContent = mensaje;
-    campo.parentElement.appendChild(aviso);
-}
 
 // Al cargar la página (al editar, el título ya trae texto) y a cada tecla
 actualizarContador();
 campoTitulo.addEventListener("input", actualizarContador);
 formulario.addEventListener("submit", (evento) => {
-    limpiarErrores();
+    limpiarErrores(formulario);
     const titulo = campoTitulo.value.trim();
 
     if (titulo === "") {
